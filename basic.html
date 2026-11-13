@@ -273,6 +273,53 @@
             document.getElementById("dd").textContent="";
         }
     </script>
+
+    <h3>Drag Drop </h3>
+    <p>drag the box and drop it below</p>
+
+
+<div id="dragbox"
+     draggable="true"
+     ondragstart="dragStart(event)"
+     style="width:150px; height:80px; background:lightblue; text-align:center; line-height:80px;">
+
+    Drag Me
+
+</div>
+
+<br>
+
+<div id="dropbox"
+     ondragover="allowDrop(event)"
+     ondrop="drop(event)"
+     style="width:300px; height:200px; background:lightgray; padding:10px;">
+
+    <p>Drop Here</p>
+
+</div>
+
+<script>
+
+function dragStart(event) {
+    event.dataTransfer.setData("text/plain", event.target.id);
+}
+
+function allowDrop(event) {
+    event.preventDefault();
+}
+
+function drop(event) {
+    event.preventDefault();
+
+    let id = event.dataTransfer.getData("text/plain");
+
+    let element = document.getElementById(id);
+
+    document.getElementById("dropbox").appendChild(element);
+}
+
+</script>
+    
 </body>
 </html>
 
