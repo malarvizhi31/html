@@ -206,15 +206,23 @@
     <input type="checkbox">JavaScript
     <input type="checkbox">python <br>
     <lablel>domain</lablel>
-    <option>
-        <select>a</select>
-        <select>b</select>
-    </option>
+    <select>
+        <option>a</option>
+        <option>b</option>
+        </select><br>
     <label>search</label>
-    <input type ="search">
+    <input type ="search"><br>
     <label>webpage</label>
     <input type="url">
-    
+    <br>
+    <h3 id="title">hello world</h3>
+    <button onclick="changeText()">click me</button>
+    <script>
+        function changeText(){
+            let x=document.getElementById("title");
+            x.innerHTML="welcome to js"
+        }
+    </script>
 </body>
 </html>
 
