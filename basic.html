@@ -19,7 +19,7 @@
     <h4>Heading 4</h4>
     <h5>Heading 5</h5>
     <h6>Heading 6</h6>
-
+    <hr>
     <pre>
     <p>This is a paragraph.</p>
     <b>Bold text</b>
@@ -200,8 +200,8 @@
     <label>reset</label>
     <input type="reset"><br>
     <lable>gender</lable>
-    <input type="radio" name ="gender" value="female">
-    <input type="radio" name="gender" value="male">
+    <input type="radio" name ="gender" value="female">female
+    <input type="radio" name="gender" value="male">male<br>
     <label>course</label>
     <input type="checkbox">JavaScript
     <input type="checkbox">python <br>
@@ -223,6 +223,57 @@
             x.innerHTML="welcome to js"
         }
     </script>
+    <p id="demo" >hiii</p>
+    <button onclick="clicks()">click here</button>
+    <script>
+        function clicks(){
+            document.getElementById("demo").textContent="hello";
+        
+        }
+    </script>
+    <p>local storage</p>
+    <input type="text" id="name" placeholder="enter your name">
+    <button onclick="save()">save</button>
+    <button onclick="display()">display</button>
+    <button onclick="remove()">delete</button>
+    <p id="result"></p>
+    <script>
+        function save(){
+            let name=document.getElementById("name").value;
+            localStorage.setItem("username",name);
+            alert("data saved");
+        }
+        function display(){
+            let data=localStorage.getItem("username");
+            document.getElementById("result").textContent=data;
+        }
+        function remove(){
+            localStorage.removeItem("username");
+            document.getElementById("result").textContent="";
+        }
+    </script>
+    <h4>session stroage</h4>
+    <input type ="text" id ="m" placeholder="enter name" >
+    <button onclick="saves()">save</button>
+    <button onclick="displays()">display</button>
+    <button onclick="removes()">delete</button>
+    <p id="dd"></p>
+    <script>
+        function saves(){
+            let name=document.getElementById("name").value;
+            sessionStorage.setItem("username",name);
+            alert("data saved");
+        }
+          function displays(){
+            let data=sessionStorage.getItem("username");
+            document.getElementById("dd").textContent=data;
+        }
+        function removes(){
+            sessionStorage.removeItem("username");
+            document.getElementById("dd").textContent="";
+        }
+    </script>
 </body>
 </html>
+
 
