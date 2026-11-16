@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>htmlcssbasics</title>
+        <link rel="icon" type="image" href="image.jpg">
+    </head>
+    <body>
+        <h2>css </h2>
+        <p>selectors</p>
+        <style>
+            *{
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            p{
+                color:blue;
+            }
+            #heading{
+                background-color: lightyellow;
+            }
+            .box{
+                color:red;
+            }
+            h2,h3,p{
+                font-family:Arial;
+            }
+            
+            .container p{
+                color:green;
+            }
+            .container >h2{
+                background-color: lightblue;
+            }
+            h3+p{
+                color:purple;
+            }
+            h3~h4{
+                background-color: pink;
+            }
+
+            input[required]{
+                border:2px solid red;
+            }
+            input[type="text"]{
+                background-color: lightyellow;
+            }
+            p[class~="box"]{
+                color:orange;
+            }
+            a[href^="https"]{
+                color:green;
+            }
+            a[href$=".pdf"]{
+                background-color: lightblue;
+            }
+
+            button:hover{
+                background-color:green;
+                color:white;
+            }
+            button:activate{
+                background-color: red;
+            }
+            input:focus{
+                background-color: lightblue;
+            }
+
+            a:visited{
+                color:purple;
+            }
+            a:link{
+                color:blue;
+            }
+            li:first-child{
+                color: red;
+            }
+            li:last-child{
+                color:green;
+            }
+            .only:only_child{
+                color:blue;
+            }
+            li:nth-child(2){
+                background-color: yellow;
+            }
+            li:nth-child(odd) {
+            border-left: 3px solid blue;
+}
+            li:nth-child(even) {
+    border-left: 3px solid green;
+}
+    p:first-of-type {
+    font-weight: bold;
+}
+    p:last-of-type {
+    text-decoration: underline;
+}
+    p:nth-of-type(2) {
+    color: brown;
+}
+    p:not(.box) {
+    font-style: italic;
+}
+    div:has(input) {
+    border: 2px dashed blue;
+}
+    .empty:empty {
+    width: 100px;
+    height: 20px;
+    background-color: gray;
+}
+   input:checked {
+    accent-color: green;
+}
+    input:disabled {
+    background-color: gray;
+}
+    input:enabled {
+    border-radius: 5px;
+}
+    input:required {
+    outline-offset: 2px;
+}
+    input:optional {
+    border: 1px solid gray;
+}
+    input:valid {
+    border-color: green;
+}
+    input:invalid {
+    border-color: red;
+}
+    input:read-only {
+    background-color: lightgray;
+}
+    input:placeholder-shown {
+    color: gray;
+}
+    :is(h1, h2) {
+    text-transform: uppercase;
+}
+    :where(section, article) {
+    padding: 5px;
+}
+
+  h1::before{
+    content:"*";
+    color:orange;
+  }
+  h1::after{
+    content:"*";
+    color:red;
+  }
+  p::first-letter{
+    font-size:25px;
+  }
+  p::first-line{
+    color:blue;
+  }
+  ::selection{
+    background-color: yellow;
+    color:red;
+  }
+  input::placeholder{
+    color:gray;
+  }
+  li::marker{
+    color:red
+  }
+  input::file-selector-button{
+    background-color: lightblue;
+  }
+
+    
+body {
+    margin: 20px;
+}
+
+.container {
+    padding: 15px;
+    border: 1px solid black;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 id="heading">CSS Selectors Demo</h1>
+
+<h2>Simple Selectors</h2>
+<p class="box">Class selector example</p>
+<p>Element selector example</p>
+
+<h2>Combinator Selectors</h2>
+
+<div class="container">
+    <h2>Direct child heading</h2>
+    <p>Descendant paragraph</p>
+
+    <div>
+        <p>Nested paragraph</p>
+    </div>
+</div>
+
+<h3>Heading 3</h3>
+<p>Adjacent sibling paragraph</p>
+
+<h4>Heading 4</h4>
+<h4>Another heading 4</h4>
+
+
+<h2>Attribute Selectors</h2>
+
+<input type="text" placeholder="Enter name" required>
+<br><br>
+
+<input type="email" placeholder="Enter email">
+<br><br>
+
+<a href="https://google.com">Google</a>
+<br><br>
+
+<a href="document.pdf">PDF File</a>
+
+<p class="box main">Attribute word example</p>
+<p lang="en-US">English language example</p>
+
+
+<h2>Pseudo-class Selectors</h2>
+
+<button>Hover Me</button>
+
+<br><br>
+
+<input type="text" placeholder="Focus here">
+<br><br>
+
+<input type="text" value="Disabled" disabled>
+<br><br>
+
+<input type="text" value="Read only" readonly>
+<br><br>
+
+<input type="checkbox" checked> Accept
+
+<ul>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+    <li>Fourth item</li>
+</ul>
+
+<p>First paragraph</p>
+<p>Second paragraph</p>
+
+<div class="only">
+    <p>Only child example</p>
+</div>
+
+<div class="empty"></div>
+
+<section>
+    Section example
+</section>
+
+
+<h2>Pseudo-element Selectors</h2>
+
+<p>
+    This is an example paragraph to demonstrate
+    first letter and first line pseudo elements.
+</p>
+
+<input type="file">
+
+</body>
+</html>
+
+
+
+        </style>
+    </body>
+</html>
