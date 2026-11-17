@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>htmlcssbasics</title>
+        <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link rel="icon" type="image" href="image.jpg">
     </head>
     <body>
@@ -220,16 +222,119 @@ div{
     border-style: dotted;
     border-color: blueviolet;
     border-width: medium;
-    border-image: url( image.jpg) 30 stretch ;
+    box-sizing: content-box;
     border-radius: 50px;
  }
+ .box2{
+     border-style: dotted;
+    border-color: palevioletred;
+    border-width: medium;
+    /* box-sizing: content-box; */
+    box-sizing: content-box;
+    border-radius: 50px;
+ }
+ a:visited{
+    color:#00FF00;
+ }
+ a:hover{
+    color:aqua
+    text-decoration:none;
+ }
+ a:link{
+    color:blueviolet;
+ }
+ a:active{
+    color:pink;
+ }
+.par1 {
+    position: relative;
+    z-index: 2;
+    background-color: lightblue;
+    width: 250px;
+    height: 250px;
+}
 
+.par2 {
+    position: relative;
+    z-index: 1;
+    background-color: lightyellow;
+    width: 250px;
+    height: 250px;
+    margin-top: -150px;
+    margin-left: 100px;
+}
+
+.child1 {
+    position: relative;
+    z-index: 3;
+    color: aqua;
+    border: 3px dotted pink;
+    padding: 50px;
+}
+
+.child2 {
+    position: relative;
+    z-index: 999;
+    color: green;
+    border: 3px solid green;
+    padding: 50px;
+}
+.of{
+    width: 80px;
+    height: 50px;
+    background-color: aqua;
+    overflow: auto;
+  
+
+}
+body{
+    background-color: rgb(251, 251, 251);
+}
+form{
+    width:300px;
+    margin: 50px auto;
+    padding:25px;
+    background-color:rgb(115, 141, 235);
+    border-radius:10px;
+}
+input,select{
+    width:100%;
+    padding: 20px;
+    margin:8px 0
+    border: 1 px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input:focus,select:focus{
+    outline:none;
+    border: 2px,solid rgb(143, 143, 226);
+}
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    margin: 10px;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+button:hover{
+    background-color: darkblue;
+}
 </style>
 </head>
 
 <body>
 
 <h1 id="heading">CSS Selectors Demo</h1>
+  <a href="home.html">
+        <i class="fa-solid fa-house icon"></i>
+    </a>
+
+<i class="fa-solid fa-user"></i>
+
+<i class="fa-solid fa-heart"></i>
 
 <h2>Simple Selectors</h2>
 <p class="box">Class selector example</p>
@@ -328,8 +433,59 @@ div{
     <h2>welcome to my website</h2>
   </div>
  <div class =box1>border solid</div>
-
-
-        </style>
+ <div class="box2">border</div>
+  <table border="2">
+    <thead>
+        <tr>
+            <td>name</td>
+            <td>course</td>
+            <td>grade</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>malar</td>
+            <td>java</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>malar</td>
+            <td>python</td>
+            <td> A</td>
+        </tr>
+        <tr>
+           <td colspan="2">overall grade</td>
+           <td><A></A></td> 
+        </tr>
+    </tbody>
+  </table>
+  <div class ="par1"> 
+    <div class="child1">child1</div>
+</div>
+  <div class="par2"><div class="child2">child2</div>
+  </div>
+  
+  <div class="of"> this is demo content to check tthe overall content to know about the overflow</div>
+   <h3>registration form</h3>
+   <form>
+   <label> Name:</label>
+   <input type="text"placeholder="enter name">
+   <br>
+   <label>email</label>
+   <input type="email"placeholder="enter mail">
+   <br>
+   <label>password</label>
+   <input type="password">
+   <br>
+   <label>gender</label>
+   <select>
+    <option>male</option>
+    <option>female</option>
+   </select>
+   <br>
+   <button type="submit">submit</button>
+   </form>
+   
     </body>
 </html>
+
