@@ -289,6 +289,11 @@ div{
 }
 body{
     background-color: rgb(251, 251, 251);
+    counter-reset: section;
+}
+h2::before{
+    counter-increment: section;
+    content:"section"counter(section)":"
 }
 form{
     width:300px;
@@ -322,6 +327,52 @@ button{
 button:hover{
     background-color: darkblue;
 }
+.div1{
+    border-radius: 25px;
+    background-color: green;
+    width: 300px;
+    height:80px;
+}
+.div2{
+    border-radius: 25px;
+    border:5px;
+}
+.div3{
+    border-radius: 25px;
+    background-image: url(image.jpg);
+    width:300px;
+    height:80px;
+    color:#00FF00;
+}
+
+.bi{
+    width: 250px;
+    border:30px solid;
+    padding:15px;  
+    border-image-source: url(image.jpg);
+    border-image-slice: 65;
+    border-image-width: 30px;
+
+}
+#example1{
+    background-image: url(image.jpg),url(image2.jpg);
+    color:rgb(253, 255, 255);
+    background-position: right-bottom,left-top;
+    background-repeat: no-repeat,repeat;
+    padding:30px;
+    height: 300px;
+    width:700px;
+}
+.gc{
+    background-image:linear-gradient(to bottom,red,green) ;
+}
+.g1{
+    background-image: radial-gradient(red,yellow,green);
+}
+.g2{
+    background-image:conic-gradient(red,green,blue,black) ;
+}
+
 </style>
 </head>
 
@@ -485,7 +536,15 @@ button:hover{
    <br>
    <button type="submit">submit</button>
    </form>
-   
+   <h2>html</h2>
+    <div class="div1">round corner</div>
+    <div class="div2">round corners</div>
+    <div class="div3">round corners</div>
+    <div class="bi">  border image</div>
+    <div id="example1">mutile backgrounds</div>
+    <div class="gc">color</div>
+    <div class ="g1">color</div>
+    <div class="g2">color</div>
     </body>
 </html>
 
