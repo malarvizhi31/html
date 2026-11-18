@@ -334,7 +334,7 @@ button:hover{
     height:80px;
 }
 .div2{
-    border-radius: 25px;
+    border-radius: 25px; 
     border:5px;
 }
 .div3{
@@ -371,6 +371,49 @@ button:hover{
 }
 .g2{
     background-image:conic-gradient(red,green,blue,black) ;
+}
+.transform{
+ 
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform:rotate(45deg);
+    transform: skewy(10deg,15deg);
+   
+}
+.trans{
+    width:120px;
+    height:100px;
+    background-color: red;
+    margin:30px;
+    transition: width 2s,background-color 2s;
+}
+.trans:hover{
+    width:200px; 
+    background-color:purple;
+}
+.ani{
+    width:200px;
+    height: 100px;
+    background-color: blue;
+    margin:20px;
+    animation-name:move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes move{
+  0%{
+    transform:translateX(0);
+    background-color: green;
+  }
+  50%{
+    transform:translateX(200px);
+    background-color: blue;
+  }
+  100%{
+    transform:translateX(0);
+    background-color: pink;
+  }
 }
 
 </style>
@@ -545,6 +588,11 @@ button:hover{
     <div class="gc">color</div>
     <div class ="g1">color</div>
     <div class="g2">color</div>
+    <div class="transform">2d transform</div>
+    <div class="ani">Animation</div>
+    <hr>
+    <div class="trans">transition</div>
+     <div class tool>tooltip</div>
     </body>
 </html>
 
