@@ -415,6 +415,50 @@ button:hover{
     background-color: pink;
   }
 }
+.tooltip{
+    position:relative;
+    display:inline-elements;
+    background-color:blue;
+    color:white;
+    padding:10px;
+    width:40px;
+    margin:40px;
+
+}
+.tooltiptext{
+    visibility: hidden;
+    width:120px;
+    background-color: black;
+    color:white;
+    text-align:center;
+    padding: 8px;
+    border-radius:5px;
+    position:absolute;
+    bottom:100%;
+    left:50%;
+    transform: translateX(-50%);
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+img{
+    border:1px solid #ddd;
+      border-radius: 5px;
+      padding:5px;
+      width:150px;
+      opacity: 0.5;
+      
+}
+img:hover{
+    box-shadow:0 0 2px 1px rgba(0,140,186,0.5);
+}
+#img1{
+   filter:drop-shadow(8px 8px 8px gray);
+   filter:brightness(100%);
+   width: 250px;
+   height:100px;
+   opacity: 1;
+}
 
 </style>
 </head>
@@ -592,7 +636,16 @@ button:hover{
     <div class="ani">Animation</div>
     <hr>
     <div class="trans">transition</div>
-     <div class tool>tooltip</div>
+     <div class ="tooltip">tooltip
+      <span class="tooltiptext">this is tooltip</span>
+      </div>
+       <a  target="_blank" href="image.jpg"> 
+        <img src="image.jpg" alt="demo" style="width:150px">
+</a>
+<br>
+
+  <img  id="img1"src="image.jpg" alt="image" width="500px" height="75">
+
     </body>
 </html>
 
