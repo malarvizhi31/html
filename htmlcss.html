@@ -441,12 +441,12 @@ button:hover{
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
-img{
+.img1{
     border:1px solid #ddd;
       border-radius: 5px;
       padding:5px;
       width:150px;
-      opacity: 0.5;
+      opacity: 1.5;
       
 }
 img:hover{
@@ -459,7 +459,25 @@ img:hover{
    height:100px;
    opacity: 1;
 }
+#img2{
+    clip-path: circle(50% at right);
+    opacity: 1;
+    width:300px;
+}
+#img3{
+    width:300px;
+    height:200px;
+    border:2px solid red;
+    object-fit:fill;
+    object-position:center;
+}
+#mi{
+    width:300px;
+    mask-image: url("mask.jpg");
+    mask-image: radial-gradient(circle, black 50%, transparent 60%);
 
+    
+}
 </style>
 </head>
 
@@ -640,12 +658,17 @@ img:hover{
       <span class="tooltiptext">this is tooltip</span>
       </div>
        <a  target="_blank" href="image.jpg"> 
-        <img src="image.jpg" alt="demo" style="width:150px">
+        <img  class="img1" src="image.jpg" alt="demo" style="width:150px">
 </a>
 <br>
 
   <img  id="img1"src="image.jpg" alt="image" width="500px" height="75">
-
+  <br>
+  <img id="img2" src="image2.jpg" alt ="image">
+  <br>
+  <img id="img3" src="image.jpg" alt="image 3">
+  <br>
+  <img id="mi" src="image.jpg"alt="maskimage">
     </body>
 </html>
 
