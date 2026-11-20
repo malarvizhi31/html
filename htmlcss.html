@@ -5,6 +5,7 @@
         <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link rel="icon" type="image" href="image.jpg">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
         <h2>css </h2>
@@ -478,6 +479,116 @@ img:hover{
 
     
 }
+button{
+    width:100px;
+    background-color: blue;
+    color:white;
+    padding:20px;
+    border:none;
+    border-radius: 25px;
+    transition:4s;
+      
+}
+button:hover{
+    background-color: red;
+}
+button:disabled{
+    background-color:green;
+}
+.pagination a {
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: lightgray;
+    color: black;
+    border-radius: 50%;
+}
+
+.pagination a:hover {
+    background-color: blue;
+    color: white;
+}
+:root{
+    --maincolor:red;
+}
+#variables{
+    color: var(--maincolor);
+}
+@property --mycolor {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: red;
+}
+
+.box {
+    width: 200px;
+    height: 150px;
+    background-color: var(--mycolor);
+    transition: --mycolor 2s;
+}
+
+.box:hover {
+    --mycolor: blue;
+}
+@media  {
+    body {
+        background-color:rgb(112, 185, 216);
+        color: white;
+    }
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: black;
+    padding:15px 30px;
+}
+.logo{
+    color:white;
+    font-size:25px;
+    font-weight:bold;
+
+}
+.menu{
+    display:flex;
+    gap:25px;
+    justify-content: end;
+}
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+}
+.menu a:hover{
+    color:orange;
+}
+@media(max-width:600px){
+    .nav{
+        flex-direction: row;
+        /* gap:15px; */
+    }
+    .menu{
+        flex-direction:row;
+        align-items:center;
+        gap:15px;
+    }
+}
+.box3 {
+    background-color: lightblue;
+    padding: 30px;
+}
+
+/* Check browser support */
+@supports (display: grid) {
+    .box3 {
+        display: grid;
+        background-color: lightgreen;
+    }
+}
+
+
+
 </style>
 </head>
 
@@ -617,7 +728,7 @@ img:hover{
   </table>
   <div class ="par1"> 
     <div class="child1">child1</div>
-</div>
+  </div>
   <div class="par2"><div class="child2">child2</div>
   </div>
   
@@ -657,18 +768,53 @@ img:hover{
      <div class ="tooltip">tooltip
       <span class="tooltiptext">this is tooltip</span>
       </div>
+      <p>image tooltip </p>
        <a  target="_blank" href="image.jpg"> 
         <img  class="img1" src="image.jpg" alt="demo" style="width:150px">
 </a>
 <br>
-
+ <p>filter</p>
   <img  id="img1"src="image.jpg" alt="image" width="500px" height="75">
   <br>
+  <p>file path shape</p>
   <img id="img2" src="image2.jpg" alt ="image">
   <br>
+  <p> image position fit</p>
   <img id="img3" src="image.jpg" alt="image 3">
   <br>
+  <p>mask image </p><br>
   <img id="mi" src="image.jpg"alt="maskimage">
-    </body>
+  <br>
+
+<button type="submit">submit</button>
+<button disabled> register </button>
+<p>pagination</p>
+<div class="pagination">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+
+    <p id="variables" > color</p>
+    <p>property</p>
+    <div class="box"></div>
+    <nav>
+        <div class="nav">
+        <div class="logo">my website</div>
+        <div class="menu">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">contact</a>
+        </div>   
+        </div>
+     </nav>
+<div class="box3">
+    Hello CSS Supports
+</div>
+
+
+
+
+</body>
 </html>
 

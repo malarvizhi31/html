@@ -1,0 +1,38 @@
+
+<!DOCTYPE  html>
+<html>
+    <head>
+        <title> my rwd</title>
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <style>
+            *{
+                box-sizing=border-box;
+            }
+            .container{
+                width:80%;
+                margin:auto;
+            }
+            img,video{
+                max-width:100%;
+                height:auto;
+                display:block;
+            }
+            @media(max-width:600px){
+                .container{
+                    width:100px;
+                    padding:10px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+   <div class="container">
+    <h2>responsive images</h2>
+    <img src="image.jpg" alt="image">
+    <h2> responsive video</h2>
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+   </div>
+    </body>
+</html>
